@@ -23,7 +23,7 @@ const LeafletMap = () => {
 	}, [])
 
 	const loadMarkersFromServer = () => {
-		fetch('https://test-task-server-six.vercel.app/')
+		fetch('http://localhost:3000/')
 			.then(response => response.json())
 			.then(data => {
 				setMarkers(data)
