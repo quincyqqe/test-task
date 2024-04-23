@@ -181,11 +181,11 @@ const fakeData = [
 	},
 ]
 
-app.get('/', (req, res) => {
+app.get('https://test-task-server-six.vercel.app/', (req, res) => {
 	res.json(fakeData)
 })
 
-app.post('/', (req, res) => {
+app.post('https://test-task-server-six.vercel.app/', (req, res) => {
 	const newData = req.body
 
 	fakeData.push(newData)
