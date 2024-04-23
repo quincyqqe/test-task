@@ -11,6 +11,13 @@ const LeafletMap = () => {
 	const [markers, setMarkers] = useState([])
 	const [selectedMarker, setSelectedMarker] = useState(null)
 
+	const greenIcon = new L.Icon({
+		iconUrl: '/marker.png',
+
+		iconSize: [38, 45],
+		iconAnchor: [16, 32],
+	})
+
 	useEffect(() => {
 		loadMarkersFromServer()
 	}, [])
@@ -46,6 +53,7 @@ const LeafletMap = () => {
 										key={index}
 										position={[marker.latitude, marker.longitude]}
 										eventHandlers={{ click: () => handleMarkerClick(marker) }}
+										icon={greenIcon}
 									></Marker>
 								)
 						)}
