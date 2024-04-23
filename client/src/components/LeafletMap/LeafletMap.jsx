@@ -23,7 +23,7 @@ const LeafletMap = () => {
 	}, [])
 
 	const loadMarkersFromServer = () => {
-		fetch('http://localhost:3000/fakeData')
+		fetch('http://localhost:3000/')
 			.then(response => response.json())
 			.then(data => {
 				setMarkers(data)

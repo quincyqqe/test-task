@@ -176,11 +176,11 @@ const fakeData = [
 	},
 ]
 
-app.get('/fakeData', (req, res) => {
+app.get('/', (req, res) => {
 	res.json(fakeData)
 })
 
-app.post('/fakeData', (req, res) => {
+app.post('/', (req, res) => {
 	const newData = req.body
 
 	fakeData.push(newData)
